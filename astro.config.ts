@@ -52,7 +52,7 @@ export default defineConfig({
       packagePresets: ['detect-browser-es'],
       viteOptimizeDeps: true,
       imports: ['react', 'react-router'],
-      dirs: ['./src/utils/*.ts', './src/hooks/*'],
+      dirs: ['./src/utils/*.ts', './src/hooks/*', './src/types/*'],
       dts: './src/auto-imports.d.ts',
       biomelintrc: {
         enabled: false, // Default `false`
