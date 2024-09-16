@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "biomejs.biome",
+    "pandy.bun",
+    "oven.bun-vscode",
+    "editorconfig.editorconfig",
+    "davidanson.vscode-markdownlint",
+    "unifiedjs.vscode-mdx",
+    "bradlc.vscode-tailwindcss",
+    "johnsoncodehk.volarjs-labs"
+  ],
+  "unwantedRecommendations": []
+}

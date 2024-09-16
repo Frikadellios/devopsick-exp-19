@@ -1,0 +1,83 @@
+{
+  "name": "devopsick-exp-19",
+  "type": "module",
+  "version": "1.0.1",
+  "packageManager": "bun@1.1.26",
+  "private": true,
+  "keywords": [
+    "template",
+    "biomejs",
+    "bun",
+    "typescript",
+    "tailwindcss",
+    "astrojs",
+    "react",
+    "shadcn",
+    "aceternity-ui"
+  ],
+  "author": "Hrihorii Ilin <devopsick@pm.me>",
+  "description": "To install dependencies: bun install",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frikadellios/devopsick-exp-19.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Frikadellios/devopsick-exp-19/issues"
+  },
+  "homepage": "https://github.com/Frikadellios/devopsick-exp-19#readme",
+  "engines": {
+    "node": ">=20.17.0"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-checker -exclude \"**/node_modules/**\"",
+    "browserslist": "bunx update-browserslist-db@latest",
+    "dev": "bunx --bun astro dev --verbose",
+    "start": "bun wrangler types && bun astro check --verbose && bunx --bun astro dev --verbose",
+    "build": "bun wrangler types && bun astro check --verbose && bunx --bun astro build --verbose",
+    "preview": "bunx --bun astro build && bun wrangler pages dev ./dist",
+    "astro": "astro",
+    "deploy": "bunx --bun astro build && bun wrangler pages deploy ./dist",
+    "cf-typegen": "wrangler types",
+    "tailwindcss": "bunx @tailwindcss/cli@next -i ./src/styles/app.css -o ./src/styles/dist/app.css",
+    "lint": "conc bun:lint:*",
+    "lint:format": "bunx @biomejs/biome format . --write",
+    "lint:fix": "bunx @biomejs/biome check . --fix",
+    "lint:check": "bunx @biomejs/biome check ./* --write --unsafe"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/cloudflare": "^11.0.4",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/ts-plugin": "^1.10.2",
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc",
+    "astro": "^4.15.6",
+    "babel-plugin-react-compiler": "^0.0.0-experimental-de2cfda-20240912",
+    "caniuse-lite": "^1.0.30001660",
+    "concurrently": "^9.0.1",
+    "react": "19.0.0-rc-206df66e-20240912",
+    "react-dom": "19.0.0-rc-206df66e-20240912",
+    "sharp": "^0.33.5",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.1",
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "@types/bun": "latest",
+    "@types/html": "^1.0.4",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^22.5.5",
+    "@types/web": "^0.0.163",
+    "editorconfig-checker": "^5.1.8",
+    "wrangler": "^3.78.2"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@rc",
+    "@types/react-dom": "npm:types-react-dom@rc"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "trustedDependencies": ["@biomejs/biome"]
+}
