@@ -20,7 +20,8 @@
       "**/.android/**",
       "**/.DS_Store/**",
       "**/Thumbs.db/**",
-      "worker-configuration.d.ts"
+      "worker-configuration.d.ts",
+      "./src/auto-imports.d.ts"
     ],
     "ignoreUnknown": true
   },
@@ -32,7 +33,7 @@
     "lineEnding": "lf",
     "lineWidth": 120,
     "attributePosition": "auto",
-    "ignore": ["node_modules/**", "dist/**", ".astro/**", "worker-configuration.d.ts"]
+    "ignore": ["node_modules/**", "dist/**", ".astro/**", "./src/auto-imports.d.ts", "worker-configuration.d.ts"]
   },
   "organizeImports": {
     "enabled": true

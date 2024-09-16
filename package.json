@@ -55,6 +55,7 @@
     "babel-plugin-react-compiler": "^0.0.0-experimental-de2cfda-20240912",
     "caniuse-lite": "^1.0.30001660",
     "concurrently": "^9.0.1",
+    "detect-browser-es": "^0.1.1",
     "react": "19.0.0-rc-206df66e-20240912",
     "react-dom": "19.0.0-rc-206df66e-20240912",
     "sharp": "^0.33.5",
@@ -70,6 +71,7 @@
     "@types/node": "^22.5.5",
     "@types/web": "^0.0.163",
     "editorconfig-checker": "^5.1.8",
+    "unplugin-auto-import": "^0.18.3",
     "wrangler": "^3.78.2"
   },
   "overrides": {

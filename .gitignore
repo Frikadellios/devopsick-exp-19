@@ -3,6 +3,10 @@ dist/
 # generated types
 .astro/
 
+
+#biome
+.biomelintrc-auto-import.json
+
 # dependencies
 node_modules/
 
