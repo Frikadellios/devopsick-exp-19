@@ -1,31 +1,46 @@
 import cloudflare from '@astrojs/cloudflare'
+import react from '@astrojs/react'
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
 import AutoImport from 'unplugin-auto-import/astro'
-
-import react from '@astrojs/react'
-
+import { SITE } from './src/site-config.ts'
+import { remarkReadingTime } from './src/utils/readTime.ts'
 const ReactCompilerConfig = {
   /* ... */
 }
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
   vite: {
     plugins: [
+      tailwindcss(),
       react({
         babel: {
           plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]]
         }
       })
-    ]
+    ],
+    build: {
+      cssMinify: 'lightningcss'
+    }
   },
+  output: 'hybrid',
   adapter: cloudflare({
     platformProxy: {
       enabled: true
     }
   }),
-
+  prefetch: {
+    prefetchAll: true
+  },
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+    shikiConfig: {
+      theme: 'material-theme-palenight',
+      wrap: true
+    }
+  },
+  site: SITE,
   integrations: [
     AutoImport({
       defaultExportByFilename: false,

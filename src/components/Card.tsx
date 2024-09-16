@@ -6,7 +6,7 @@ export function Card() {
         React:
         {state}
       </h1>
-      <button type="button" onClick={() => setState(state + 1)}>
+      <button className="bg-chiter text-foreground" type="button" onClick={() => setState(state + 1)}>
         Add
       </button>
     </>

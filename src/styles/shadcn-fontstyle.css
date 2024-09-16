@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-foreground;
+  }
+
+  h2 {
+    @apply mt-10 scroll-m-20 border-b pb-2 text-3xl font-extrabold tracking-tight transition-colors first:mt-0 text-foreground;
+  }
+
+  h3 {
+   @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight text-foreground;
+  }
+
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight text-foreground;
+  }
+
+  p {
+    @apply text-foreground leading-7 [&:not(:first-child)]:mt-6;
+  }
+
+  :not(pre) > code {
+    @apply relative rounded border bg-background px-[0.3rem] py-[0.2rem] font-mono text-sm text-foreground;
+  }

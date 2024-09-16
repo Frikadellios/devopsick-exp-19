@@ -1,14 +1,14 @@
 ---
 import { Card as CardReact } from '@/components/Card'
 import Card from '@/components/Card.astro'
-import Layout from '@/layouts/TestLayout.astro'
+import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<CardReact client:load></CardReact>
 
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
 			Check out the <code>src/pages</code> directory to get started.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -41,10 +41,6 @@ import Layout from '@/layouts/TestLayout.astro'
 <style>
 	:root {
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
 	}
 
 	main {
