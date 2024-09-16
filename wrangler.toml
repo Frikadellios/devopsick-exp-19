@@ -15,8 +15,12 @@ pages_build_output_dir = "./dist"
 # - https://developers.cloudflare.com/pages/functions/bindings/#environment-variables
 # Note: Use secrets to store sensitive data.
 # - https://developers.cloudflare.com/pages/functions/bindings/#secrets
-# [vars]
+[vars]
 # MY_VARIABLE = "production_value"
+SKIP_DEPENDENCY_INSTALL = "true"
+UNSTABLE_PRE_BUILD = "asdf install bun latest && asdf global bun latest && bun i"
+NODE_V = "20.17.0"
+
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
 # Docs: https://developers.cloudflare.com/pages/functions/bindings/#workers-ai
@@ -68,8 +72,12 @@ pages_build_output_dir = "./dist"
 
 ######## PREVIEW environment config ########
 
-# [env.preview.vars]
+[env.preview.vars]
 # API_KEY = "xyz789"
+SKIP_DEPENDENCY_INSTALL = "true"
+UNSTABLE_PRE_BUILD = "asdf install bun latest && asdf global bun latest && bun i"
+NODE_V = "20.17.0"
+
 
 # [[env.preview.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
@@ -77,8 +85,12 @@ pages_build_output_dir = "./dist"
 
 ######## PRODUCTION environment config ########
 
-# [env.production.vars]
+[env.production.vars]
 # API_KEY = "abc123"
+SKIP_DEPENDENCY_INSTALL = "true"
+UNSTABLE_PRE_BUILD = "asdf install bun latest && asdf global bun latest && bun i"
+NODE_V = "20.17.0"
+
 
 # [[env.production.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"

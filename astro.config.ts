@@ -5,6 +5,7 @@ import { defineConfig } from 'astro/config'
 import AutoImport from 'unplugin-auto-import/astro'
 import { SITE } from './src/site-config.ts'
 import { remarkReadingTime } from './src/utils/readTime.ts'
+
 const ReactCompilerConfig = {
   /* ... */
 }
